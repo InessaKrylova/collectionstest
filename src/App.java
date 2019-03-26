@@ -1,7 +1,11 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
-import java.util.*;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map.Entry;
 
 public class App {
@@ -18,12 +22,12 @@ public class App {
 					words.add(wordWithoutPunctuation);
 				}
 			}
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
 
-		searchForDuplicates(words, new LinkedHashMap<String, Integer>());
-		searchForDuplicates(words, new HashMap<String, Integer>());
+			searchForDuplicates(words, new LinkedHashMap<String, Integer>());
+			searchForDuplicates(words, new HashMap<String, Integer>());
+		} catch (FileNotFoundException e) {
+			System.out.println("Error! File with text for parsing isn`t found");
+		}
 	}
 
 	public static void searchForDuplicates(List<String> words, HashMap<String, Integer> wordsDuplicates) {
@@ -40,13 +44,12 @@ public class App {
 			}
 		}
 		stopWatch.end();
-
 		stopWatch.printTime(wordsDuplicates.getClass().getName());
 
 		printMap(wordsDuplicates);
 	}
 
-	public static void printMap(HashMap<String, Integer> wordsDuplicates) {
+	public static void printMap(Map<String, Integer> wordsDuplicates) {
 		for (Entry<String, Integer> entry : wordsDuplicates.entrySet()) {
 			System.out.print("["+entry.getKey()+": "+entry.getValue()+"] ");
 		}
