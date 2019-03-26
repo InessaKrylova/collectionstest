@@ -13,10 +13,11 @@ public class App {
 		List<String> words = new ArrayList<>();
 		try (Scanner scanner = new Scanner(new File(path))) {
 			while (scanner.hasNextLine()) {
-				String wordWithoutPunctuation = scanner.next().replaceAll("[^А-Яа-яё]", "");
-				words.add(wordWithoutPunctuation.toLowerCase());
+				String wordWithoutPunctuation = scanner.next().replaceAll("[^А-Яа-яё]", "").toLowerCase();
+				if (!wordWithoutPunctuation.isEmpty()) {
+					words.add(wordWithoutPunctuation);
+				}
 			}
-			//System.out.println(words.toString());
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -40,15 +41,16 @@ public class App {
 		}
 		stopWatch.end();
 
-		stopWatch.getTime(wordsDuplicates.getClass().getName());
+		stopWatch.printTime(wordsDuplicates.getClass().getName());
 
-		//printMap(wordsDuplicates);
+		printMap(wordsDuplicates);
 	}
 
-	public void printMap(HashMap<String, Integer> wordsDuplicates) {
+	public static void printMap(HashMap<String, Integer> wordsDuplicates) {
 		for (Entry<String, Integer> entry : wordsDuplicates.entrySet()) {
-			System.out.println("["+entry.getKey()+": "+entry.getValue()+"]");
+			System.out.print("["+entry.getKey()+": "+entry.getValue()+"] ");
 		}
+		System.out.println();
 	}
 
 }

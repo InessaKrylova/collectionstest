@@ -12,7 +12,7 @@ public class StopWatch {
         this.endTime = System.nanoTime();
     }
 
-    public void printT(String collection) {
+    public void printTime(String collection) {
         long nanoseconds = endTime - startTime;
         System.out.println("Time for "+collection+": "+nanoseconds+" nanoseconds");
         /*long milliseconds = endTime - startTime;
