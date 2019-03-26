@@ -21,8 +21,14 @@ public class App {
 			e.printStackTrace();
 		}
 
-		LinkedHashMap<String, Integer> wordsDuplicates = new LinkedHashMap<>();
+		searchForDuplicates(words, new LinkedHashMap<String, Integer>());
+		searchForDuplicates(words, new HashMap<String, Integer>());
+	}
 
+	public static void searchForDuplicates(List<String> words, HashMap<String, Integer> wordsDuplicates) {
+		StopWatch stopWatch = new StopWatch();
+
+		stopWatch.start();
 		for (String word : words) {
 			if (wordsDuplicates.containsKey(word)) {
 				int countBefore = wordsDuplicates.get(word);
@@ -32,12 +38,17 @@ public class App {
 				wordsDuplicates.put(word, 1);
 			}
 		}
+		stopWatch.end();
 
+		stopWatch.getTime(wordsDuplicates.getClass().getName());
+
+		//printMap(wordsDuplicates);
+	}
+
+	public void printMap(HashMap<String, Integer> wordsDuplicates) {
 		for (Entry<String, Integer> entry : wordsDuplicates.entrySet()) {
 			System.out.println("["+entry.getKey()+": "+entry.getValue()+"]");
 		}
-
 	}
-
 
 }

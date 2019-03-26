@@ -1,22 +1,23 @@
-import java.util.TimeZone;
 
 public class StopWatch {
-
-    public StopWatch() {
-    }
 
     private long startTime;
     private long endTime;
 
     public  void start() {
-        this.startTime = System.currentTimeMillis();
+        this.startTime = System.nanoTime();
     }
 
     public void end() {
-        this.endTime = System.currentTimeMillis();
+        this.endTime = System.nanoTime();
     }
 
-    /*public long getTime() {
-        long millis = this.elapsed(TimeUnit.MILLISECONDS);
-    }*/
+    public void printT(String collection) {
+        long nanoseconds = endTime - startTime;
+        System.out.println("Time for "+collection+": "+nanoseconds+" nanoseconds");
+        /*long milliseconds = endTime - startTime;
+        int seconds = (int) (milliseconds / 1000) % 60 ;
+        System.out.println(seconds);
+        System.out.println(milliseconds);*/
+    }
 }
