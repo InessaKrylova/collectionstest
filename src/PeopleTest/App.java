@@ -19,10 +19,10 @@ public class App {
         HashSet<Person> personsHashSet = new HashSet<>();
         TreeSet<Person> personsTreeSet = new TreeSet<>();
 
-        printList("SortPersonsByAgeAndName", sortPersonsByAgeAndName(personsList));
+        //printList("SortPersonsByAgeAndName", sortPersonsByAgeAndName(personsList));
         printList("SortPersonsByBirthday", sortPersonsByBirthday(personsList));
-        printList("SortPersonsByName", sortPersonsByName(personsList));
-        printList("SortPersonsByNameAndBirthday", sortPersonsByNameAndBirthday(personsList));
+        //printList("SortPersonsByName", sortPersonsByName(personsList));
+        //printList("SortPersonsByNameAndBirthday", sortPersonsByNameAndBirthday(personsList));
     }
 
     public static List<Person> sortPersonsByAgeAndName(List<Person> list) {

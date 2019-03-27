@@ -48,4 +48,37 @@ public class Person {
           .append("] ");
         return sb.toString();
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        }
+
+        Person unknown = (Person) obj;
+        return  (birthday == unknown.getBirthday())
+                &&
+                (
+                    (name == unknown.name)
+                    ||
+                    (name != null &&name.equals(unknown.getName()))
+                );
+    }
+
+    @Override
+    public int hashCode(){
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((name == null)
+                ? 0
+                : name.hashCode());
+        result = prime * result + birthday.hashCode();
+        result = prime * result + ((name == null)
+                ? 0
+                : name.hashCode());
+        return result;
+    }
 }
