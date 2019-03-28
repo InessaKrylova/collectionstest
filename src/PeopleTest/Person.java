@@ -1,6 +1,8 @@
 package PeopleTest;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.Date;
 
 public class Person {
@@ -28,10 +30,24 @@ public class Person {
         this.birthday = birthday;
     }
 
-    public int getAge() {
-        int age=0;
-        age = (new Date()).getYear() - birthday.getYear();
-        //TODO sort by month and day
+    public Integer getAge() {
+        Date today = new Date();
+        int curYear = today.getYear();
+        int birthYear = birthday.getYear();
+
+        int age = curYear - birthYear;
+        int curMonth = today.getMonth();
+        int birthMonth = birthday.getMonth();
+
+        if (birthMonth > curMonth) {
+            age--;
+        } else if (birthMonth == curMonth) {
+            int curDay = today.getDate();
+            int dobDay = birthday.getDate();
+            if (dobDay > curDay) { // this year can't be counted!
+                age--;
+            }
+        }
         return age;
     }
 
@@ -70,15 +86,20 @@ public class Person {
 
     @Override
     public int hashCode(){
-        final int prime = 31;
+        final int temp = 12;
         int result = 1;
-        result = prime * result + ((name == null)
+        result = temp * result + ((name == null)
                 ? 0
                 : name.hashCode());
-        result = prime * result + birthday.hashCode();
-        result = prime * result + ((name == null)
+        result = temp * result + birthday.hashCode();
+        result = temp * result + ((name == null)
                 ? 0
                 : name.hashCode());
+        if (result<0) result = -result;
         return result;
+    }
+
+    public int compareByName(Person other) {
+        return this.getName().compareTo(other.getName());
     }
 }

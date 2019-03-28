@@ -14,32 +14,28 @@ public class App {
             personsList.add(peopleGenerator.nextPerson());
         }
 
+        printList("SortPersonsByAgeAndName", sortPersonsByAgeAndName(personsList));
+        //printList("SortPersonsByBirthday", sortPersonsByBirthday(personsList));
+        //printList("SortPersonsByName", sortPersonsByName(personsList));
+        //printList("SortPersonsByNameAndBirthday", sortPersonsByNameAndBirthday(personsList));
+
         //use this list to create HashSet and then TreeSet
         //check whether there were doubled values (if list.length > set.length means that list contains identical values)
         HashSet<Person> personsHashSet = new HashSet<>();
         TreeSet<Person> personsTreeSet = new TreeSet<>();
-
-        //printList("SortPersonsByAgeAndName", sortPersonsByAgeAndName(personsList));
-        printList("SortPersonsByBirthday", sortPersonsByBirthday(personsList));
-        //printList("SortPersonsByName", sortPersonsByName(personsList));
-        //printList("SortPersonsByNameAndBirthday", sortPersonsByNameAndBirthday(personsList));
     }
 
     public static List<Person> sortPersonsByAgeAndName(List<Person> list) {
         Collections.sort(list, new Comparator() {
             // one person is greater then another if he is older that other, if two persons has the same age compare by names
             public int compare(Object o1, Object o2) {
-                Integer age1 = ((Person) o1).getAge();
-                Integer age2 = ((Person) o2).getAge();
-                int compareResult = age1.compareTo(age2);
+                Person p1 = (Person) o1;
+                Person p2 = (Person) o2;
+                int compareResult = p1.getAge().compareTo(p2.getAge());
 
-                if (compareResult!=0) {
-                    return compareResult;
-                } else {
-                    String name1 = ((Person) o1).getName();
-                    String name2 = ((Person) o2).getName();
-                    return name1.compareTo(name2);
-                }
+                return (compareResult!=0)
+                        ? compareResult
+                        : p1.getName().compareTo(p2.getName());
             }}
         );
         return list;
@@ -49,9 +45,9 @@ public class App {
         Collections.sort(list, new Comparator() {
             // one person is greater then another if he is older that other, if two persons has the same age compare by names
             public int compare(Object o1, Object o2) {
-                Date birthDate1 = ((Person) o1).getBirthday();
-                Date birthDate2 = ((Person) o2).getBirthday();
-                return birthDate1.compareTo(birthDate2);
+                Person p1 = (Person) o1;
+                Person p2 = (Person) o2;
+                return p1.getBirthday().compareTo(p2.getBirthday());
             }}
         );
         return list;
@@ -61,9 +57,9 @@ public class App {
         Collections.sort(list, new Comparator() {
             // one person is greater then another if he is older that other, if two persons has the same age compare by names
             public int compare(Object o1, Object o2) {
-                String name1 = ((Person) o1).getName();
-                String name2 = ((Person) o2).getName();
-                return name1.compareTo(name2);
+                Person p1 = (Person) o1;
+                Person p2 = (Person) o2;
+                return p1.getName().compareTo(p2.getName());
             }}
         );
         return list;
@@ -73,17 +69,13 @@ public class App {
         Collections.sort(list, new Comparator() {
             // one person is greater then another if he is older that other, if two persons has the same age compare by names
             public int compare(Object o1, Object o2) {
-                String name1 = ((Person) o1).getName();
-                String name2 = ((Person) o2).getName();
-                int compareResult = name1.compareTo(name2);
+                Person p1 = (Person) o1;
+                Person p2 = (Person) o2;
+                int compareResult = p1.getName().compareTo(p2.getName());
 
-                if (compareResult!=0) {
-                    return compareResult;
-                } else {
-                    Date birthDate1 = ((Person) o1).getBirthday();
-                    Date birthDate2 = ((Person) o2).getBirthday();
-                    return birthDate1.compareTo(birthDate2);
-                }
+                return (compareResult!=0)
+                        ? compareResult
+                        : p1.getBirthday().compareTo(p2.getBirthday());
             }}
         );
         return list;
@@ -96,7 +88,16 @@ public class App {
         }
         System.out.println();
     }
+
+    public void addPersonToHashSet(HashSet<Person> hashSet, Person person){
+
+    }
+
+    public void addPersonToTreeSet(TreeSet<Person> treeSet, Person person){
+
+    }
 }
+
 /* add needed methods to store Person in HashSet and TreeSet*/
 
 /*
