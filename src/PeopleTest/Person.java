@@ -1,8 +1,6 @@
 package PeopleTest;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.Period;
 import java.util.Date;
 
 public class Person implements Comparable<Person>{
@@ -50,12 +48,13 @@ public class Person implements Comparable<Person>{
         if (obj == null || obj.getClass() != this.getClass()) {
             return false;
         }
+        if (!(obj instanceof Person)) return false;
 
         Person unknown = (Person) obj;
-        return  (birthday == unknown.getBirthday())
+        return  (birthday.equals(unknown.getBirthday()))
                 &&
                 (
-                    (name == unknown.name)
+                    (name.equals(unknown.name))
                     ||
                     (name != null &&name.equals(unknown.getName()))
                 );
@@ -63,18 +62,18 @@ public class Person implements Comparable<Person>{
 
     @Override
     public int hashCode() {
-        final int temp = 12;
+        final int prime = 31;
         int result = 1;
-        result = temp * result + birthday.hashCode() + name.hashCode();
-        if (result < 0) result = -result;
+        result = prime * result + birthday.hashCode();
+        result = prime * result + name.hashCode();
         return result;
     }
 
     @Override
     public int compareTo(Person o) {
         int compareResult = (this.getBirthday()).compareTo(o.getBirthday());
-        return compareResult;/*(compareResult!=0)
+        return (compareResult!=0)
                 ? compareResult
-                : (this.name).compareTo(o.name);*/
+                : (this.name).compareTo(o.name);
     }
 }
