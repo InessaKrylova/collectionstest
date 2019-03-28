@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.Date;
 
-public class Person {
+public class Person implements Comparable<Person>{
     private String name;
     private Date birthday;
 
@@ -30,35 +30,12 @@ public class Person {
         this.birthday = birthday;
     }
 
-    public Integer getAge() {
-        Date today = new Date();
-        int curYear = today.getYear();
-        int birthYear = birthday.getYear();
-
-        int age = curYear - birthYear;
-        int curMonth = today.getMonth();
-        int birthMonth = birthday.getMonth();
-
-        if (birthMonth > curMonth) {
-            age--;
-        } else if (birthMonth == curMonth) {
-            int curDay = today.getDate();
-            int dobDay = birthday.getDate();
-            if (dobDay > curDay) { // this year can't be counted!
-                age--;
-            }
-        }
-        return age;
-    }
-
     //proper method to print out a Person
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder("[");
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         sb.append(name)
-          .append("; ")
-          .append(getAge())
           .append("; ")
           .append(format.format(birthday))
           .append("] ");
@@ -85,21 +62,19 @@ public class Person {
     }
 
     @Override
-    public int hashCode(){
+    public int hashCode() {
         final int temp = 12;
         int result = 1;
-        result = temp * result + ((name == null)
-                ? 0
-                : name.hashCode());
-        result = temp * result + birthday.hashCode();
-        result = temp * result + ((name == null)
-                ? 0
-                : name.hashCode());
-        if (result<0) result = -result;
+        result = temp * result + birthday.hashCode() + name.hashCode();
+        if (result < 0) result = -result;
         return result;
     }
 
-    public int compareByName(Person other) {
-        return this.getName().compareTo(other.getName());
+    @Override
+    public int compareTo(Person o) {
+        int compareResult = (this.getBirthday()).compareTo(o.getBirthday());
+        return compareResult;/*(compareResult!=0)
+                ? compareResult
+                : (this.name).compareTo(o.name);*/
     }
 }

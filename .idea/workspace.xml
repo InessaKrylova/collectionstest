@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6f774f9-5067-45ed-a84e-0f44ff104555" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PeopleTest/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PeopleTest/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PeopleTest/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PeopleTest/Person.java" afterDir="false" />
     </list>
@@ -15,14 +14,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PeopleTest/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="93" column="5" lean-forward="true" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
+            <state relative-caret-position="462">
+              <caret line="40" column="10" lean-forward="true" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
               <folding>
-                <element signature="method#sortPersonsByAgeAndName#0;class#App#0" />
-                <element signature="method#sortPersonsByBirthday#0;class#App#0" />
                 <element signature="method#sortPersonsByName#0;class#App#0" />
                 <element signature="method#sortPersonsByNameAndBirthday#0;class#App#0" />
                 <element signature="method#printList#0;class#App#0" />
@@ -31,24 +28,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Downloads/Microsoft.SkypeApp_kzf8qxf38zg5c!App/All/CollectionsTask (2).java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PeopleTest/Person.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-157">
-              <caret line="62" column="42" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
+            <state relative-caret-position="295">
+              <caret line="54" column="28" lean-forward="true" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2169#2170#0" expanded="true" />
-                <element signature="e#2214#2215#0" expanded="true" />
+                <element signature="e#589#590#0" expanded="true" />
+                <element signature="e#629#630#0" expanded="true" />
+                <marker date="1553775448054" expanded="true" signature="1791:1963" ph="..." />
               </folding>
             </state>
           </provider>
@@ -84,8 +73,9 @@
         <option value="$PROJECT_DIR$/src/PeopleTest/Names.java" />
         <option value="$USER_HOME$/Downloads/Microsoft.SkypeApp_kzf8qxf38zg5c!App/All/CollectionsTask (2).java" />
         <option value="$PROJECT_DIR$/src/PeopleTest/PeopleGenerator.java" />
-        <option value="$PROJECT_DIR$/src/PeopleTest/Person.java" />
+        <option value="$PROJECT_DIR$/src/PeopleTest/MyOwn.java" />
         <option value="$PROJECT_DIR$/src/PeopleTest/App.java" />
+        <option value="$PROJECT_DIR$/src/PeopleTest/Person.java" />
       </list>
     </option>
   </component>
@@ -119,6 +109,12 @@
               <item name="CollectionsTest" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="CollectionsTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CollectionsTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="PeopleTest" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -128,7 +124,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553762836961" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553775458820" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -199,12 +195,12 @@
       <workItem from="1553608197471" duration="1136000" />
       <workItem from="1553666145442" duration="1572000" />
       <workItem from="1553678375578" duration="10233000" />
-      <workItem from="1553753359267" duration="5323000" />
+      <workItem from="1553753359267" duration="13613000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31680000" />
+    <option name="totallyTimeSpent" value="39970000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -356,18 +352,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PeopleTest/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-157">
-          <caret line="62" column="42" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2169#2170#0" expanded="true" />
-            <element signature="e#2214#2215#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/Microsoft.SkypeApp_kzf8qxf38zg5c!App/All/CollectionsTask (2).java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -375,16 +359,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/PeopleTest/MyOwn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#91#92#0" expanded="true" />
+            <element signature="e#118#119#0" expanded="true" />
+            <element signature="e#155#156#0" expanded="true" />
+            <element signature="e#187#188#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/PeopleTest/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="93" column="5" lean-forward="true" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
+        <state relative-caret-position="462">
+          <caret line="40" column="10" lean-forward="true" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
           <folding>
-            <element signature="method#sortPersonsByAgeAndName#0;class#App#0" />
-            <element signature="method#sortPersonsByBirthday#0;class#App#0" />
             <element signature="method#sortPersonsByName#0;class#App#0" />
             <element signature="method#sortPersonsByNameAndBirthday#0;class#App#0" />
             <element signature="method#printList#0;class#App#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PeopleTest/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="54" column="28" lean-forward="true" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#589#590#0" expanded="true" />
+            <element signature="e#629#630#0" expanded="true" />
+            <marker date="1553775448054" expanded="true" signature="1791:1963" ph="..." />
           </folding>
         </state>
       </provider>
